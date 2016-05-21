@@ -23,7 +23,7 @@ df$DateTime <- strptime(paste(df$Date, df$Time), "%d/%m/%Y %H:%M:%S")
 df <- select(df, -Date, -Time)
 
 ## Plot
-with(df, plot(DateTime, Sub_metering_1, ylab = "Energy sub metering", col = "black", type = "l"))
+with(df, plot(DateTime, Sub_metering_1, xlab = "", ylab = "Energy sub metering", col = "black", type = "l"))
 with(df, lines(DateTime, Sub_metering_2, col = "red", type = "l"))
 with(df, lines(DateTime, Sub_metering_3, col = "blue", type = "l"))
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1, xjust = 1, yjust = 1)
