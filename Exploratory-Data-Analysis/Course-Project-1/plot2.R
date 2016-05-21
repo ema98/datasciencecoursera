@@ -23,6 +23,6 @@ df$DateTime <- strptime(paste(df$Date, df$Time), "%d/%m/%Y %H:%M:%S")
 df <- select(df, -Date, -Time)
 
 ## Plot
-with(df, plot(DateTime, Global_active_power, ylab = "Global Active Power (kilowatts)", type = "l"))
+with(df, plot(DateTime, Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l"))
 dev.copy(png, "plot2.png")
 dev.off()
